@@ -1,4 +1,11 @@
-@import url('https://fonts.google.com/specimen/Figtree');
+/** Import fonts */
+@font-face {
+  font-family: 'Figtree';
+  src: url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf)
+      format('truetype'),
+    url(./assets/fonts/Figtree-VariableFont_wght.ttf) format('truetype'),
+    url(./assets/fonts/static/Figtree-ExtraBold.ttf) format('truetype');
+}
 
 /* CSS RESET */
 *,
@@ -13,7 +20,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 input,
 textarea,
 button {
@@ -29,116 +35,31 @@ button {
   --BGCOLOR-WHITE: hsl(0, 0%, 100%);
   --BGCOLOR-GRAY500: hsl(0, 0%, 42%);
   --BGCOLOR-GRAY950: hsl(0, 0%, 7%);
-
-  /* margin */
-  --MARGIN-LEFT: 0.9rem;
 }
 html {
   background-color: var(--BGCOLOR-YELLOW);
   font-family: var(--FF);
   font-size: var(--FS);
 }
-/* section  */
-.container {
-  max-width: 100%;
-  min-height: 50vh;
-  margin-inline: auto;
-  margin-top: 10rem;
+
+body {
+  min-height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
-
+/* Main container */
+.container {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 .section {
-  width: 320px;
-  height: 435px;
   background-color: var(--BGCOLOR-WHITE);
-  border: 1px solid var(--BGCOLOR-GRAY950);
-  border-radius: 4%;
-  display: flex;
-
-  flex-flow: column;
-  box-shadow: 6px 6px var(--BGCOLOR-GRAY950);
 }
 
-/* Hero */
-.section__hero {
-  overflow: hidden;
-  padding: 1rem;
-  /* outline: 1px solid var(--BGCOLOR-GRAY950); */
+footer {
+  position: absolute;
+  bottom: 1.5rem;
 }
-.section__hero svg {
-  max-width: 100%;
-  border-radius: 14%;
-}
-.btn___container {
-  margin-top: 1rem;
-}
-.btn {
-  background-color: var(--BGCOLOR-YELLOW);
-  color: var(--BGCOLOR-GRAY950);
-  font-weight: 700;
-  font-size: small;
-  padding: 0.4rem;
-  border-radius: 8%;
-  border: none;
-  margin-left: var(--MARGIN-LEFT);
-  cursor: pointer;
-}
-.btn:hover {
-  background-color: hsla(60, 69%, 50%, 0.87);
-}
-.hero__caption {
-  font-size: smaller;
-  font-weight: 550;
-  margin-top: 0.8rem;
-  margin-left: var(--MARGIN-LEFT);
-  color: var(--BGCOLOR-GRAY950);
-}
-/* article  */
-.article {
-  margin-left: var(--MARGIN-LEFT);
-  margin-top: 0.8rem;
-}
-.article__h {
-  /* font-weight: 700; */
-  /* white-space: none; */
-  font-weight: 600;
-  font-size: x-large;
-  margin-bottom: 1.2rem;
-}
-.article__h:hover {
-  color: var(--BGCOLOR-YELLOW);
-  cursor: pointer;
-}
-.article__p {
-  font-weight: 100;
-  color: var(--BGCOLOR-GRAY500);
-  font-size: medium;
-}
-.section__end {
-  margin-top: 0.4rem;
-  max-width: 50%;
-  display: flex;
-  margin-left: var(--MARGIN-LEFT);
-  justify-content: space-around;
-  align-items: center;
-}
-.greg__pic {
-  display: inline;
-  height: 60%;
-}
-.greg__name {
-  font-weight: 900;
-}
-/* body {
- 
-} */
-
-/* .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-} */
