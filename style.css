@@ -1,8 +1,7 @@
 /** Import fonts */
 @font-face {
   font-family: 'Figtree';
-  src: url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf)
-      format('truetype'),
+  src: url(./assets/fonts/Figtree-VariableFont_wght.ttf) format('truetype'),
     url(./assets/fonts/Figtree-VariableFont_wght.ttf) format('truetype'),
     url(./assets/fonts/static/Figtree-ExtraBold.ttf) format('truetype');
 }
@@ -25,6 +24,7 @@ textarea,
 button {
   font: inherit;
 }
+
 /* VARRIABLES */
 :root {
   /* fonts */
@@ -41,13 +41,21 @@ html {
   font-family: var(--FF);
   font-size: var(--FS);
 }
-
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--FF);
+}
 body {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+header {
+  display: none;
 }
 /* Main container */
 .container {
@@ -56,10 +64,104 @@ body {
   flex-direction: column;
 }
 .section {
+  width: 327px;
+  height: 501px;
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  border: 1px solid var(--BGCOLOR-GRAY950);
   background-color: var(--BGCOLOR-WHITE);
+  box-shadow: 8px 8px var(--BGCOLOR-GRAY950);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  transition: width 200ms, height 200ms, transform 200ms;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 1.2rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero__footer-caption {
+  background-color: var(--BGCOLOR-YELLOW);
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+.hero__footer-caption:hover {
+  background-color: hsla(57, 89%, 55%, 0.888);
+}
+.hero__footer-time {
+  margin-top: 1rem;
+  font-size: medium;
+  font-weight: 400;
+}
+.article {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0.3rem;
+  margin: auto;
+  gap: 1rem;
+}
+.article__h {
+  font-size: 1.3rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.article__p {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+.section__end {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.7rem;
+}
+.section__end img {
+  width: 12%;
+}
+.greg__name {
+  font-size: small;
+  font-weight: 900;
 }
 
 footer {
-  position: absolute;
-  bottom: 1.5rem;
+  display: none;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* Medai qurey */
+@media screen and (min-width: 746px) {
+  header {
+    display: block;
+    position: absolute;
+    top: 0;
+    margin-top: 1rem;
+    font-size: medium;
+  }
+  .section {
+    /* width: 384px;
+    height: 522px; */
+    transform: scale(1.2);
+  }
+
+  footer {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0.6rem;
+  }
 }
