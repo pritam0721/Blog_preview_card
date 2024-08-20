@@ -115,6 +115,9 @@ header {
   font-weight: 900;
   white-space: nowrap;
 }
+.article__h:hover {
+  color: var(--BGCOLOR-YELLOW);
+}
 .article__p {
   font-size: 0.9rem;
   font-weight: 200;
@@ -153,8 +156,6 @@ footer {
     font-size: medium;
   }
   .section {
-    /* width: 384px;
-    height: 522px; */
     transform: scale(1.2);
   }
 
